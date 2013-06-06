@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://wcfcourier.com/app/parkersburg_anniversary">
+<head>
+	<title>Timeline: 2008 tornado - Five years later</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    
+	<!-- Mobile meta tags-->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="cleartype" content="on">
+    
+    <!-- Facebook meta tags-->
+	<meta property="og:title" content="2008 tornado: Five years later"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="http://wcfcourier.com/app/parkersburg_anniversary/"/>
+	<meta property="og:image" content="http://wcfcourier.com/app/parkersburg_anniversary/photos/052508bp-tornado4.jpg"/>
+	<meta property="og:site_name" content="WCFCourier"/>
+	<meta property="og:description" content="On May 25, 2008, a killer EF-5 tornado traveled 43 miles across the plains of eastern Iowa, crushing several towns in its path. On the five year anniversary of one of Iowa's most dangerous tornadoes, the Courier takes a look back at the dramatic storm." />
+
+	<!-- Twitter meta tags -->
+	<meta property="twitter:site" content="@WCFCourier">
+	<meta property="twitter:card" content="Check out look back at the 2008 tornado">
+	<meta property="twitter:url" content="http://wcfcourier.com/app/parkersburg_anniversary/">
+	<meta property="twitter:title" content="2008 tornado: Five years later">
+	<meta property="twitter:description" content="On May 25, 2008, a killer EF-5 tornado traveled 43 miles across the plains of eastern Iowa, crushing several towns in its path. On the five year anniversary of one of Iowa's most dangerous tornadoes, the Courier takes a look back at the dramatic storm.">
+	<meta property="twitter:image" content="http://wcfcourier.com/app/parkersburg_anniversary/photos/052508bp-tornado4.jpg">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/leaflet.awesome-markers.css" />
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="css/font-awesome-ie7.min.css" />
+		<link rel="stylesheet" href="css/leaflet.ie.css" />
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.beforeafter-1.4.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/leaflet.js"></script>
+	<script type="text/javascript" src="js/lib/leaflet.awesome-markers.min.js"></script>
+	<script type="text/javascript" src="js/lib/breakpoints.js"></script>
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+</head>
+
+<body onLoad="view_options();">
+	<noscript>
+		<div id="noscript_note">
+			You must have JavaScript enabled to view this page.
+		</div>
+	</noscript>
+	<div class="sidebar">
+		<div class="sidebar_header">
+			<div id="courier_logo">
+				<img src="images/WCFCourier_LOGO_BW_300px.png" />
+			</div>
+
+			<div class="sidebar_header_text"></div>
+		</div>
+
+		<div id="share">
+        <ul>
+            <li class="float_left">
+                <a data-text="" href="http://twitter.com/share" class="twitter-share-button"
+                    data-count="horizontal">Tweet</a>
+                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+            </li>
+            <li class="float_left">
+                <g:plusone size="medium"></g:plusone>
+            </li>
+            <li>
+                <div id="fb-root"></div>
+                <script src="http://connect.facebook.net/en_US/all.js#appId=161694630579757&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="90" show_faces="false" font="">
+                </fb:like>
+            </li>
+        </ul>
+    	</div>
+    	
+		<div class="sidebar_content">
+			<div class="sidebar_text"></div>
+
+			<div id="credits">
+				<div id="credits_content">
+					<p>Map powered by: <a href="http://leafletjs.com/" target="_blank">Leaflet</a> - Map data CCBYSA &copy; 2012 OpenStreetMap contributors, Imagery &copy; 2012 CloudMade</p>
+    			</div>
+			</div>
+
+			<div name="0" class="previous_button btn btn-primary" type="button">
+				Previous
+			</div>
+			<div name="0" class="next_button btn btn-primary" type="button">
+				Next
+			</div>
+		</div>
+	</div>
+
+	<div class="toggle_description btn btn-primary" type="button">
+		Show details
+	</div>
+
+	<div class="img_box">
+		<div class="x_button toggle_img btn btn-primary" type="button">
+			<strong>X</strong>
+		</div>
+		<div class="img_box_header"></div>
+		<div class="img_box_content"></div>
+	</div>
+	<div class="img_box_cover"></div>
+	
+	<div class="description_box">
+		<div class="x_button toggle_description btn btn-primary" type="button">
+			<strong>X</strong>
+		</div>
+		
+		<div class="description_box_header"></div>
+
+		<div class="description_box_content">
+			<div class="description_box_text"></div>
+
+			<div name="0" class="previous_button btn btn-primary" type="button">
+				Previous
+			</div>
+			<div name="0" class="next_button btn btn-primary" type="button">
+				Next
+			</div>
+		</div>
+	</div>
+	<div class="description_box_cover"></div>
+
+	<div id='map'></div>
+
+	<div id="legend"> 
+    	<div id='view_header'>
+    		<h3>View options</h3>
+    	</div>
+    	<div id="hide_this_toggle_damage">
+    	<div class='view'>
+    		<div class='options'>
+    			<label class='checkbox'>
+    				<span class="button">
+    					<input type='checkbox' onClick='photo_view_options();' checked='checked' id='photo_box' />
+    				</span>
+    				<span style="background-color: #5b396b; width: 20px; height: 20px; border: 1px solid #737373;">
+						<i class="icon-camera icon-white" style="padding-left: 3px; padding-right: 3px;"></i>
+					</span>
+					Photos
+            	</label>
+            	<label class='checkbox'>
+    				<span class="button">
+    					<input type='checkbox' onClick='photo_view_options();' checked='checked' id='video_box' checked />
+    				</span>
+    				<span style="background-color: #5b396b; width: 20px; height: 20px; border: 1px solid #737373;">
+						<i class="icon-film icon-white" style="padding-left: 3px; padding-right: 3px;"></i>
+					</span>
+					Videos
+            	</label>
+            	<label class='checkbox'>
+    				<span class="button">
+    					<input type='checkbox' onClick='photo_view_options();' checked='checked' id='before_after_box' />
+    				</span>
+    				<span style="background-color: #0069a1; width: 20px; height: 20px; border: 1px solid #737373;">
+						<i class="icon-picture icon-white" style="padding-left: 3px; padding-right: 3px;"></i>
+					</span>
+					Before/after photos
+            	</label>
+            	<label class='checkbox'>
+    				<span class="button">
+    					<input type='checkbox' onClick='photo_view_options();' checked='checked' id='victims_box' />
+    				</span>
+    				<span style="background-color: #496c7c; width: 20px; height: 20px; border: 1px solid #737373;">
+						<i class="icon-warning-sign icon-white" style="padding-left: 3px; padding-right: 3px;"></i>
+					</span>
+					Victims
+            	</label>
+    		</div>
+    	</div>
+		
+		<div id="damage_area">
+			<h3>Damage area</h3>
+		</div>
+    	<div class="colors">
+    		<div class='options'>
+    			<label class='checkbox'>
+    				<span class="button">
+    					<input type='checkbox' onClick='view_options();' checked='checked' id='e4_box' />
+    				</span>
+    				<span class="one"></span>
+            		EF-4 or greater
+            	</label>
+            	<label class='checkbox'>
+        			<span class="button">
+        				<input type='checkbox' onClick='view_options();' checked='checked' id='e2_box' />
+        			</span>
+        			<span class="two"></span>
+           			EF-2 to EF-4
+           		</label>
+           		<label class='checkbox'>
+        			<span class="button">
+        				<input type='checkbox' onClick='view_options();' checked='checked' id='outer_box' />
+        			</span>
+        			<span class="three"></span>
+        			Outer extent
+        		</label>
+			</div>
+    	</div>
+    	</div>
+
+    	<div id="toggle_damage" class="btn btn-primary" type="button">Click to hide</div>
+	</div>
+
+	
+	<script type="text/javascript" src="tornado_path/damage.js"></script>
+	<script type="text/javascript" src="tornado_path/timeline.js"></script>
+	<script type="text/javascript" src="js/base_map.js"></script>
+	<script type="text/javascript" src="js/map_points.js"></script>
+    
+</body>
+
+</html>

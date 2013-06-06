@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<kml xmlns:umapst="http://www.afcomponents.com/as3/umap/styles" xmlns:umap="http://www.afcomponents.com/as3/umap" xmlns="http://earth.google.com/kml/2.1">
+  <Document>
+    <name><![CDATA[Parkersburg Tornado Map]]></name>
+    <visibility>1</visibility>
+    <Style id="EditablePolylineStyle1">
+      <LineStyle>
+        <color>7cff0000</color>
+        <width>6</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff0000</color>
+        <fill>1</fill>
+        <outline>2</outline>
+      </PolyStyle>
+      <umapst:GeometryStyle type="com.afcomponents.umap.styles::GeometryStyle">
+        <umapst:fill type="String">rgb</umapst:fill>
+        <umapst:fillRGB type="int">0</umapst:fillRGB>
+        <umapst:fillAlpha type="Number">0.5</umapst:fillAlpha>
+        <umapst:fillGradient type="null"/>
+        <umapst:fillBitmap type="null"/>
+        <umapst:stroke type="String">true</umapst:stroke>
+        <umapst:strokeRGB type="int">2237103</umapst:strokeRGB>
+        <umapst:strokeAlpha type="int">1</umapst:strokeAlpha>
+        <umapst:strokeThickness type="int">4</umapst:strokeThickness>
+        <umapst:strokeGradient type="null"/>
+        <umapst:strokeStyle type="com.afcomponents.umap.styles::StrokeStyle">
+          <umapst:pixelHinting type="Boolean">true</umapst:pixelHinting>
+          <umapst:noScale type="String">normal</umapst:noScale>
+          <umapst:capsStyle type="String">round</umapst:capsStyle>
+          <umapst:jointStyle type="String">round</umapst:jointStyle>
+          <umapst:miterLimit type="int">3</umapst:miterLimit>
+        </umapst:strokeStyle>
+      </umapst:GeometryStyle>
+    </Style>
+    
+    <Placemark id="EditablePolyline1">
+      <styleUrl>#EditablePolylineStyle1</styleUrl>
+      <visibility>1</visibility>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>-92.87782787800784,42.55469415071784,0 -92.7819721651172,42.57269821496047,0 -92.77098583699222,42.57451856140041,0 -92.61896252156254,42.57795684859842,0 -92.30434154988284,42.57542871469575,0 -92.25078320027346,42.574923075616,0 -92.19653820515629,42.57775460165797,0 -92.16014599324222,42.58179941583366,0 -92.11496471882816,42.59635857427365,0 -92.0847523164844,42.615664433487126,0 -92.06538891316409,42.628498001892574,0</coordinates>
+      </LineString>
+    </Placemark>
+    
+    <umap:UMapSettings>
+      <umap:center>-92.46172070,42.71795622,0.00000000</umap:center>
+      <umap:zoom>9</umap:zoom>
+      <umap:bounds>
+        <umap:north>43.465075511538004</umap:north>
+        <umap:south>41.96173192986841</umap:south>
+        <umap:east>-90.36745190117189</umap:east>
+        <umap:west>-94.55598949882814</umap:west>
+      </umap:bounds>
+      <umap:type>terrain</umap:type>
+      <umap:provider>com.afcomponents.umap.providers.google::GoogleProvider</umap:provider>
+    </umap:UMapSettings>
+    <description><![CDATA[On May 25, 2009 an EF5 tornado ripped through parts of Iowa, killing several people and leaving behind a path of destruction.]]></description>
+  </Document>
+</kml>
