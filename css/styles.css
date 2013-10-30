@@ -178,6 +178,7 @@ a {
 	height: 88%;
 	position: fixed;
 	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 
